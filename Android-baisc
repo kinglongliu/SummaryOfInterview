@@ -2,5 +2,5 @@
 2.FragmentPagerAdapter与FragmentStatePagerAdapter的区别?
   FragmentPagerAdapter适用于页面较少的情况
   FragmentStatePagerAdapter适用于页面较多的情况
-  主要看其destoryItem方法，在FragmentStatePagerAdapter的destoryItem方法中，fragment是被真正释放了的;
-  在FragmentPagerAdapter的destoryItem方法中并没有释放fragment，只是将fragment的UI与Activity的UI脱离了。
+  主要看其destoryItem方法，在FragmentStatePagerAdapter的destoryItem方法中，fragment是被真正释放了的，内存会被回收，适合较多的页面;
+  在FragmentPagerAdapter的destoryItem方法中并没有释放fragment，只是将fragment的UI与Activity的UI脱离了，比较消耗内存，适合较少的页面.
